@@ -1,0 +1,324 @@
+<!DOCTYPE html>  
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Sans%20Pro%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%7CPathway%20Gothic%20One&amp;display=swap">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url("../WebsiteImages/background2.jpg");
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        
+        .inside {
+            z-index: 2;
+            position: absolute;
+            top: 0%;
+            width: 88%;
+            margin-left:6%;
+        }
+        
+        .header {
+            overflow: hidden;
+            background-color: #361999;
+            padding: 25px 15px;
+        }
+        
+        .header a {
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #361999;
+        }
+        
+        button:hover {
+            background-color: #78FFF1;
+        }
+        
+        button:click {
+            background-color: dodgerblue;
+        }
+        
+        .header-right {
+            float: right;
+            padding-top:15px;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .column {
+            float: left;
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+        option: hover {
+            background-color: dodgerblue;
+        }
+        .main {
+            background-color: #378b29;
+background-image: linear-gradient(315deg, #378b29 0%, #74d680 65%);
+        }
+        .heading {
+            color : white;
+            font-family : Source Sans Pro;
+            font-size : 50px;
+            padding-left : 350px;
+        }
+        .txt {
+            padding-left : 20px;
+            font-family : Roboto;
+            color : white;
+        }
+        .container2 {
+            margin-top: 20px;
+            margin-left: 20%;
+            margin-right: 20%;
+            background-color: #378b29;
+background-image: linear-gradient(315deg, #378b29 0%, #74d680 74%);
+        }
+        .main2 {
+            background-color : white;
+            border-radius: 10px;
+            margin-left : 15%;
+            margin-right : 15%;
+        }
+        .pad {
+            margin-left : 10%;
+            margin-right : 10%;
+        }
+        input, select, textarea {
+  outline: none;
+  appearance: unset !important;
+  -moz-appearance: unset !important;
+  -webkit-appearance: unset !important;
+  -o-appearance: unset !important;
+  -ms-appearance: unset !important; }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  appearance: none !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  -o-appearance: none !important;
+  -ms-appearance: none !important;
+  margin: 0; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  -ms-box-shadow: none !important; }
+
+input[type=checkbox] {
+  appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  -o-appearance: checkbox !important;
+  -ms-appearance: checkbox !important; }
+
+input[type=radio] {
+  appearance: radio !important;
+  -moz-appearance: radio !important;
+  -webkit-appearance: radio !important;
+  -o-appearance: radio !important;
+  -ms-appearance: radio !important; }
+
+        input, select {
+            width: 100%;
+            display: block;
+            border: none;
+            border-bottom: 2px solid #ebebeb;
+            padding: 5px 0;
+            color: black;
+            margin-bottom: 31px;
+            font-family: 'Roboto Slab'; 
+        }
+  input:focus, select:focus {
+    color: black;
+    border-bottom: 2px solid #4966b1; }
+
+input[type=checkbox]:not(old) {
+  width: 2em;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: none; }
+
+input[type=checkbox]:not(old) + label {
+  display: inline-block;
+  margin-top: 7px;
+  margin-bottom: 25px; }
+
+input[type=checkbox]:not(old) + label > span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin-right: 15px;
+  margin-bottom: 3px;
+  border: 1px solid #ebebeb;
+  background: white;
+  background-image: -moz-linear-gradient(white, white);
+  background-image: -ms-linear-gradient(white, white);
+  background-image: -o-linear-gradient(white, white);
+  background-image: -webkit-linear-gradient(white, white);
+  background-image: linear-gradient(white, white);
+  vertical-align: bottom; }
+
+input[type=checkbox]:not(old):checked + label > span {
+  background-image: -moz-linear-gradient(white, white);
+  background-image: -ms-linear-gradient(white, white);
+  background-image: -o-linear-gradient(white, white);
+  background-image: -webkit-linear-gradient(white, white);
+  background-image: linear-gradient(white, white); }
+
+input[type=checkbox]:not(old):checked + label > span:before {
+  content: '\f26b';
+  display: block;
+  color: #222;
+  font-size: 11px;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Material-Design-Iconic-Font';
+  font-weight: bold; }
+.cha:click{
+    color:black;
+}
+.btn-dark{color:#fff;background-color:black;border-color:#4cae4c}.btn-dark.focus,.btn-dark:focus{color:#fff;background-color:#black;border-color:#255625}.btn-dark:hover{color:#fff;background-color:black;border-color:#398439}.btn-dark.active,.btn-dark:active,.open>.dropdown-toggle.btn-dark{color:#fff;background-color:black;background-image:none;border-color:#398439}.btn-dark.active.focus,.btn-dark.active:focus,.btn-dark.active:hover,.btn-dark:active.focus,.btn-dark:active:focus,.btn-dark:active:hover,.open>.dropdown-toggle.btn-dark.focus,.open>.dropdown-toggle.btn-dark:focus,.open>.dropdown-toggle.btn-dark:hover{color:#fff;background-color:#398439;border-color:#255625}.btn-dark.disabled.focus,.btn-dark.disabled:focus,.btn-dark.disabled:hover,.btn-dark[disabled].focus,.btn-dark[disabled]:focus,.btn-dark[disabled]:hover,fieldset[disabled] .btn-dark.focus,fieldset[disabled] .btn-dark:focus,fieldset[disabled] .btn-dark:hover{background-color:#5cb85c;border-color:#4cae4c}.btn-dark .badge{color:#5cb85c;background-color:#fff}.
+        </style>
+</head>
+<body>
+    <div class="inside">
+       <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <a href="login-option.html" alt="toll logo"><img src="../WebsiteImages/logo.jpg" height="120px" width="150px"></a>
+                    </div>
+                    <div class="column">
+                        <a href="login-option.html" alt="toll logo">
+                            <h1 style="color:white; font-family:Arial, Helvetica, sans-serif">E-FIR </h1>
+                                <h4 style="color:white">An initiative by Delhi Police to develop an Automated FIR register system</h4>
+                        </a>
+                    </div>
+                    <div class="header-right">
+                        <div class="column">
+                            <a href="Login-option.html">
+                                <h3 style="color:white"><button>Home</button></h3>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="Contribute.html">
+                                <h3 style="color:white"><button>Contribute</button></h3>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="Contact.html">
+                                <h3 style="color:white"><button>Contact Us</button></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+        <br>
+        <h1 class="heading">Welcome {{Username}}</h1>
+        <center><h3 style="color:white;"> You have logged in to your official User Account</h4></center><br><br>
+        <center><h2 class="txt"> You can now register a First Information Report to your designated police stations</h2></center><br>
+        <br>
+         <div class="row" style="padding-left: 270px;">
+                <div class="column">
+                    <button onclick="enter()" class="btn btn-lg btn-danger btn-outline-danger">Register the First Information Report</button>
+                </div>
+                <div class="column">
+                    <button onclick="hideit()" class="btn btn-lg btn-warning btn-outline-warning">Hide the First Information Report</button>
+                </div>
+            </div>
+        <br><br>
+        <div class="main2" id="register" style="display:none;">
+            <div class="pad"><br><br>
+                <b><h2 style="color:black"><b> FIRST INFORMATION REPORT</b></h2></b>
+                <br>
+                <h4 style="color:black">COMPLAINANT DETAILS</h4>
+                <br>
+                <input type="text" name="name" id="name" placeholder="Enter the complainant's name">
+                <br>
+                <input type="text" name="fname" id="fname" placeholder="Enter the Father/Mother/Guradian name">
+                <br>
+                <input type="textarea" name="address" id="address" placeholder="Enter the complainant's Address">
+                <br>
+                <input type="text" name="city" id="fname" placeholder="Enter the complainant's City Name">
+                <br>
+                <input type="number" name="phone" id="phone" placeholder="Enter the complainant's phone number">
+                <br>
+                <hr width="100%" size="3" color="black">
+                <br>
+                <h4 style="color:black">CRIME DETAILS</h4>
+                <br>
+                <input type="text" name="crime-name" id="crime-name" placeholder="Enter the name of accused person(if more than one, enter all names)">
+                <br>
+                <input type="text" name="name" id="name" placeholder="Enter the name of organisation(in case of any fraud or forgery)">
+                <br>
+                <input type="text" name="crime-place" id="crime-place" placeholder="Enter the crime place">
+                <br>
+                <input type="date" class="cha" name="date" id="date" placeholder="Enter the date of crime">
+                <br>
+                <input type="time" name="time" id="time" placeholder="Enter the time of crime">
+                <br>
+                <input type="textarea" name="statement" id="statement" placeholder="Enter the statement of witness">
+                <br>
+                <hr style="width:100%; color:black;">
+                <br>
+                <h4 style="color:black">ENTER PHOTO OF YOUR AADHAR CARD FOR AUTHENTICATION</h4>
+                <br>
+               
+                    <center><b>Upload the photo of your Aadhar Card : </b><?centeR>
+                    <input type="file" name="card" id="card"style="padding-left : 250px;">
+                <br>
+                <br>
+                <button type="button" class="btn btn-dark btn-lg">Submit FIR</button>
+                <br><br>
+            </div>
+        </div>
+        <br><br>
+        </div>
+    </div>
+    <script>
+        function enter() {
+            var details = document.getElementById("register");
+            if(details.style.display === "none"){
+                details.style.display = "block";
+            }
+        } 
+        function hideit() {
+            var details = document.getElementById("register");
+            if(details.style.display === "block"){
+                details.style.display = "none";
+            }
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source%20Sans%20Pro%3A300%2C300i%2C400%2C400i%2C600%2C600i%2C700%7CPathway%20Gothic%20One&amp;display=swap">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .bg-image {
+            background-image: url("../WebsiteImages/background2.jpg");
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .inside {
+            z-index: 2;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+        }
+        
+        .header {
+            overflow: hidden;
+            background-color: #361999;
+            padding: 25px 15px;
+        }
+        
+        .header a {
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+        }
+        
+        button {
+            background-color: #361999;
+        }
+        
+        button:hover {
+            background-color: #78FFF1;
+        }
+        
+        button:click {
+            background-color: dodgerblue;
+        }
+        
+        .header-right {
+            float: right;
+            padding-top:15px;
+        }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .column {
+            float: left;
+            padding-left: 5px;
+        }
+        
+        .heading {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-left : 80px;
+            color: white;
+            width: 80%;
+        }
+        
+        .login-btn {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+            font-size: 30px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-image"></div>
+    <div class="inside">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <a href="login-option.html" alt="toll logo"><img src="../WebsiteImages/logo.jpg" height="120px" width="150px"></a>
+                    </div>
+                    <div class="column">
+                        <a href="login-option.html" alt="toll logo">
+                            <h1 style="color:white; font-family:Arial, Helvetica, sans-serif">E-FIR </h1>
+                                <h4 style="color:white">An initiative by Delhi Police to develop an Automated FIR register system</h4>
+                        </a>
+                    </div>
+                    <div class="header-right">
+                        <div class="column">
+                            <a href="Login-option.html">
+                                <h3 style="color:white"><button>Home</button></h3>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="Contribute.html">
+                                <h3 style="color:white"><button>Contribute</button></h3>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a href="Contact.html">
+                                <h3 style="color:white"><button>Contact Us</button></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <center>
+            <h1 class="heading" style="font-size: 60px;">Welcome to E-FIR</h1><br>
+            <h3 class="heading"> E-FIR is an Automated and Fast FIR registering System by which any Delhi Citizen can register an FIR along with its details. This system would also notify the citizen on the actions done against the FIR registered.
+            </h3><br>
+            <div class="row" style="padding-left: 270px;">
+                <div class="column">
+                    <a href="login-as-police.html"><button style="background-color:blue" class="login-btn">Login/Signup as a police official</button></a>
+                </div>
+                <div class="column">
+                    <a href="login-as-user.html"><button style=" background-color:green" class="login-btn"> Login/Signup as a Delhi citizen</button></a>
+                </div>
+            </div>
+
+        </center>
+    </div>
+
+</body>
+
+</html>
