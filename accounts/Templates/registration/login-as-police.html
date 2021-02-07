@@ -70,8 +70,8 @@
         
         .container2 {
             margin-top: 2%;
-            margin-left: 28%;
-            margin-right: 28%;
+            margin-left: 30%;
+            margin-right: 30%;
         }
         
         input {
@@ -254,19 +254,11 @@
             text-decoration-color: white;
         }
     </style>
-    <script>
-        function isNumber(evt){
-    var charCode = (evt.which) ? evt.which : evt.keyCode
-    if (charCode > 31 && (charCode < 48 || charCode > 57))
-        return false;
-    return true;
-}
-    </script>
 </head>
 
 <body>
     <div class="inside">
-<header class="header">
+        <header class="header">
             <div class="container">
                 <div class="row">
                     <div class="column">
@@ -301,42 +293,36 @@
         <div class="container2">
             <div class="wrap-login100">
                 <div class="signin-form">
-                    <center><h2 style="font-family:Arial, Helvetica, sans-serif; color:white">Create your account as an Police Official</h2></center><br><br>
-                    <form method="POST" class="create-account-as-police-form" id="create-account-as-police-form">
+                    <h2 style="font-family:Arial, Helvetica, sans-serif; color:white">Login as an Police Official</h2><br><br>
+                    <form method="POST" class="register-as-police-form" id="register-as-police-form" action="police-page.html">
+                        {% csrf_token %}
                         <div class="form-group">
                             <div class="wrap-input100 validate-input" data-validate="Enter username">
-                                <input class="input100" type="text" name="username" placeholder="Enter Your New Username">
-                                <span class="focus-input100" data-placeholder=""></span>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="wrap-input100 validate-input" data-validate="Enter username">
-                                <input class="input100" type="text" name="phone" placeholder="Enter Your Phone Number" onkeypress="return isNumber(event)">
+                                <input class="input100" type="text" name="username" placeholder="Enter Your Username">
                                 <span class="focus-input100" data-placeholder=""></span>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <div class="wrap-input100 validate-input" data-validate="Enter password">
-                                <input class="input100" type="password" name="pass" placeholder="Enter Your New Password">
+                                <input class="input100" type="password" name="pass" placeholder="Enter Your Password">
                                 <span class="focus-input100" data-placeholder=""></span>
                             </div>
                         </div>
-                        <br>
-                        <div class="form-group">
-                            <div class="wrap-input100 validate-input" data-validate="Enter password">
-                                <input class="input100" type="password" name="pass" placeholder="Verify Your New Password">
-                                <span class="focus-input100" data-placeholder=""></span>
-                            </div>
+                        <div>
+                        <table>
+                            <td><input type="checkbox" name="remember-me" id="remember-me"></td>
+                            <td><h4 style="color:white;padding-top:5px;padding-left:10px;border:none;">Remember me</h4></td>
+                        </table>
                         </div>
                         <br><br>
                         <div class="form-group form-button">
-                            <input type="submit" name="signin" id="signin" class="btn btn-primary btn-lg btn-block" value="Create Your New Account">
+                            <input type="submit" name="signin" id="signin" class="btn btn-primary btn-lg btn-block" value="Log in">
                         </div>
-                        <br><hr style="width:100%">
-                        <br>
                     </form>
+                    <br><hr style="width:100%">
+                    <br>
+                    <a href="token-police.html"><h4 style="color:white;padding-left:10px;">Create a new account by using your token number provided by the Police Department</h4></a>
                 </div>
             </div>
         </div>
